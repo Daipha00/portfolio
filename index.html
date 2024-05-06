@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dainess</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Resume Website Template Free Download" name="keywords">
+        <meta content="Resume Website Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        
+<script>
+
+   
+  </script>
+
+        <!-- <script>
+            function previewFile(event, filePath) {
+              // Prevent the default behavior of the link
+              event.preventDefault();
+          
+              // Load the HTML file using an AJAX request
+              const xhr = new XMLHttpRequest();
+              xhr.open('GET', filePath);
+              xhr.onload = function() {
+                if (xhr.status === 200) {
+                  // Display the HTML content in the popup
+                  const popup = document.getElementById('popup');
+                  const popupContent = document.getElementById('popup-content');
+                  popupContent.innerHTML = xhr.responseText;
+                  popup.style.display = 'block';
+                } else {
+                  console.error(`Error occurred while loading file: ${filePath}`);
+                }
+              };
+              xhr.onerror = function() {
+                console.error(`Error occurred while loading file: ${filePath}`);
+              };
+              xhr.send();
+            }
+          
+             // Get the close button element
+const closeButton = document.querySelector('.close');
+console.log(closeButton);
+
+// Add an event listener to the close button
+closeButton.addEventListener('click', function() {
+
+    console.log("closeButton");
+
+    alert("Hellow Mtabe")
+  // Get the popup element
+  const popup = document.querySelector('#popup');
+
+  // Check if popup exists before trying to hide it
+  if (popup) {
+    // Hide the popup
+    popup.style.display = 'none';
+    alert("Hellow Nyamwanji")
+  } else {
+    console.error('Popup element not found!');
+  }
+});
+          </script> -->
+
+          <style>
+              .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+          </style>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <div class="wrapper">
+        
+                <!-- Portfolio Start -->
+                <div class="portfolio" id="portfolio">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Portfolio</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul id="portfolio-flters">
+                                    <li data-filter="*" class="filter-active">All</li>
+                                    <li data-filter=".web-des">Design</li>
+                                    <li data-filter=".web-dev">Development</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row portfolio-container">
+                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
+                                        <a href="img/portfolio-1.jpg" data-lightbox="portfolio" data-title="Project Name" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <!-- <a href="css/island.html" class="link-details" title="More Details"><i class="fa fa-link"></i></a> -->
+                                        <a href="css/island.html" class="link-details" title="More Details" onclick="previewFile(event, 'css/island.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Island Mash Site</span></a>
+                                        <div id="popup" class="popup">
+                                            <div class="popup-content">
+                                              <span class="close">&times;</span>
+                                              <div id="popup-content"></div>
+                                            </div>
+                                          </div>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/portfolio-2.jpg" class="img-fluid" alt="">
+                                        <a href="img/portfolio-2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="ecotours.html" class="link-details" title="More Details" onclick="previewFile(event, 'ecotours.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Tours And Travellers Design</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/zra.png" class="img-fluid" alt="">
+                                        <a href="img/zra.png" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="license.html" class="link-details" title="More Details" onclick="previewFile(event, 'license.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Transport License system</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/boat.jpg" class="img-fluid" alt="">
+                                        <a href="img/boat.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="zanboat.html" class="link-details" title="More Details" onclick="previewFile(event, 'zanboat.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Boat App</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/portfolio-4.jpg" class="img-fluid" alt="">
+                                        <a href="img/portfolio-4.jpg" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="fish.html" class="link-details" title="More Details" onclick="previewFile(event, 'fish.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Fish App</span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="img/fingerprint.webp" class="img-fluid" alt="">
+                                        <a href="img/fingerprint.webp" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
+                                        <a href="biometric.html" class="link-details" title="More Details" onclick="previewFile(event, 'biometric.html')"><i class="fa fa-link"></i></a>
+                                        <a class="portfolio-title" href="#">Project Name <span>Health Insurance Biometric Registration </span></a>
+                                    </figure>
+                                </div>
+                            </div>
+
+                          
+
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Start -->
+                
+             
+                
+                <!-- Contact Start -->
+                <div class="contact" id="contact">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>Contact</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <p><i class="fa fa-user"></i>Dainess Phanuel</p>
+                                    <p><i class="fa fa-tag"></i>Software Developer</p>
+                                    <p><i class="fa fa-envelope"></i>msagaladaines@gmail.com</p>
+                                    <p><i class="fa fa-phone"></i>+255 710 288 697</p>
+                                    <p><i class="fa fa-map-marker"></i>Zanzibar, Tanzania</p>
+                                    <div class="social">
+                                        
+                                        <a class="btn" href="https://www.linkedin.com/in/dainess-phanuel-b27a84286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin-in"></i></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact End -->
+                
+                <!-- Footer Start -->
+               
+                <!-- Footer Start -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <script>
+            function previewFile(event, filePath) {
+              // Prevent the default behavior of the link
+              event.preventDefault();
+          
+              // Load the HTML file using an AJAX request
+              const xhr = new XMLHttpRequest();
+              xhr.open('GET', filePath);
+              xhr.onload = function() {
+                if (xhr.status === 200) {
+                  // Display the HTML content in the popup
+                  const popup = document.getElementById('popup');
+                  const popupContent = document.getElementById('popup-content');
+                  popupContent.innerHTML = xhr.responseText;
+                  popup.style.display = 'block';
+                } else {
+                  console.error(`Error occurred while loading file: ${filePath}`);
+                }
+              };
+              xhr.onerror = function() {
+                console.error(`Error occurred while loading file: ${filePath}`);
+              };
+              xhr.send();
+            }
+          
+             // Get the close button element
+const closeButton = document.querySelector('.close');
+console.log(closeButton);
+
+// Add an event listener to the close button
+closeButton.addEventListener('click', function() {
+
+    console.log("closeButton");
+
+    // alert("Hellow Mtabe")
+  // Get the popup element
+  const popup = document.querySelector('#popup');
+
+  // Check if popup exists before trying to hide it
+  if (popup) {
+    // Hide the popup
+    popup.style.display = 'none';
+    // alert("Hellow Nyamwanji")
+  } else {
+    console.error('Popup element not found!');
+  }
+});
+          </script>
+
+    </body>
+</html>
